@@ -13,13 +13,13 @@ requires (*optional): 1155
 ## Abstract
 this standard is an extention of ERC-1155. It proposes seperated, multiple usage rights which can be rented for designated period while the proprietorship is still belongs to owner.
 
-本标准是ERC1155的扩展. 它引入了独立的/多份的/可租赁的使用权, 该使用权可以按照不同周期租赁出去,同时NFT的使用权仍然属于owner.
+说明:本标准是ERC1155的扩展. 它引入了独立的/多份的/可租赁的使用权, 该使用权可以按照不同周期租赁出去,同时NFT的使用权仍然属于owner.
 
 ## Motivation
 NFT tokens like ERC721 and ERC1155 emphasize more on ownership. However, NFT tokens have more usage scenarios than holding. Picture owners can rent out the picture to different clients for different periods. Music owners can sell to multiple users according to playback duration. Thus, it would be useful for developers to deploy more complex NFT products.
 
 
-传统的ERC721和ERC1155更多关注所有权, 然而, 作为数字资产, NFT的使用特性比拥有特性更常用. 例如, 图片的拥有者可以按时间周期向工厂出租其使用权, 或者音乐的所有者可以按播放时间允许用户收听. 所以我们通过直接引入可租赁的使用权,更方便开发者使用NFT.
+说明:传统的ERC721和ERC1155更多关注所有权, 然而, 作为数字资产, NFT的使用特性比拥有特性更常用. 例如, 图片的拥有者可以按时间周期向工厂出租其使用权, 或者音乐的所有者可以按播放时间允许用户收听. 所以我们通过直接引入可租赁的使用权,更方便开发者使用NFT.
 
 
 ## Specification
@@ -76,14 +76,14 @@ interface IRental {
 If NFT owner does not intend to transfer or mortgage the ownership when its value is realized, the safeRent function enables owner to rent NFT for appointed period, and takeBack function enables the usage rights return to owner.
 
 
-//创立本提案的两个主要好处, 一是实现了分离的使用权, 这样就可以在不转移所有权的情况下方便的授权.
-//safeRent函数帮助所有者将使用权出租给其他用户, 到期后执行takeBack函数可取回使用权.
+说明:创立本提案的两个主要好处, 一是实现了分离的使用权, 这样就可以在不转移所有权的情况下方便的授权.
+safeRent函数帮助所有者将使用权出租给其他用户, 到期后执行takeBack函数可取回使用权.
 
 
 ## Backwards Compatibility
 As mentioned at the very beginning, it is an extension interface of ERC1155, hence it is 100% compatible with ERC-1155.
 
-如开头所说, 这是ERC1155的扩展, 所以, 完全兼容ERC1155.
+说明:如开头所说, 这是ERC1155的扩展, 所以, 完全兼容ERC1155.
 
 ## Security Considerations
 There are no security considerations related directly to the implementation of this standard.
