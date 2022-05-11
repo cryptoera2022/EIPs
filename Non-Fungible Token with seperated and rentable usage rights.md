@@ -72,7 +72,6 @@ interface IRental {
 
 ```
 ## Rationale
-#Seperated usage rights
 If NFT owner does not intend to transfer or mortgage the ownership when its value is realized, the safeRent function enables owner to rent NFT for appointed period, and takeBack function enables the usage rights return to owner.
 
 
