@@ -1,6 +1,6 @@
 ---
 eip: <to be assigned>
-title: Non-Fungible Token with seperated and rentable usage rights	//带有独立可租赁使用权的NFT
+title: Non-Fungible Token with seperated and rentable usage rights
 description: <Description is one full (short) sentence>
 author: tech@derivstudio.com
 discussions-to: 
