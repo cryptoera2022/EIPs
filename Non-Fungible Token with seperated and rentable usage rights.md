@@ -26,7 +26,7 @@ pragma solidity ^0.8.0;
 
 interface IRental {
     /**
-     * @notice This emits when the `user` of an NFT or the `expires` of the user changes
+     * @notice This emits when user rent NFT
      * @param id The id of the current token
      * @param user The address to rent the NFT usage rights
      * @param amount The amount of usage rights
