@@ -1,7 +1,7 @@
 ---
 eip: <to be assigned>
-title: Non-Fungible Token with seperated and rentable usage rights
-description: <Description is one full (short) sentence>
+title: Extending ERC1155 with rentable usage rights
+description: This standard adds multiple usage rights to ERC1155 and makes it rentable separately
 author: tech@derivstudio.com
 discussions-to: 
 status: Draft
