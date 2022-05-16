@@ -25,9 +25,13 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 pragma solidity ^0.8.0;
 
 interface IRental {
-    // Logged when the user of a NFT is changed or expires is changed
-    /// @notice Emitted when the `user` of an NFT or the `expires` of the `user` is changed
-    /// The zero address for user indicates that there is no user address
+    /**
+     * @notice This emits when the `user` of an NFT or the `expires` of the user changes
+     * @param id The id of the current token
+     * @param user The address to rent the NFT usage rights
+     * @param amount The amount of usage rights
+     * @param expires The specified period of time to rent
+     **/
     event Rented(
         uint256 indexed id,
         address indexed user,
@@ -35,14 +39,22 @@ interface IRental {
         uint256 expires
     );
 
+    /**
+     * @notice This emits when the NFT owner takes back the usage rights from the tenant (the `user`) 
+     * @param id The id of the current token
+     * @param user The address to rent the NFT's usage rights
+     * @param amount Amount of usage rights
+     **/
     event TakeBack(uint256 indexed id, address indexed user, uint256 amount);
 
-    /// @notice Function to rent out usage rights
-    /// @param from the address to approve
-    /// @param to the address to rent the NFT usage rights
-    /// @param id the NFT ID
-    /// @param amount number of usage right amount
-    /// @param expires the appointed rent period
+    /**
+     * @notice Function to rent out usage rights
+     * @param from The address to approve
+     * @param to The address to rent the NFT usage rights
+     * @param id The id of the current token
+     * @param amount The amount of usage rights
+     * @param expires The specified period of time to rent
+     **/
     function safeRent(
         address from,
         address to,
@@ -51,20 +63,29 @@ interface IRental {
         uint256 expires
     ) external;
 
-    /// @notice Function to take back usage rights
-    /// @param user the address who rent the NFT's usage rights
-    /// @param tokenId the NFT ID
-    /// @param amount number of rented usage right amount
+    /**
+     * @notice Function to take back usage rights after the end of the tenancy
+     * @param user The address to rent the NFT's usage rights
+     * @param tokenId The id of the current token
+     * @param amount The amount of usage rights
+     **/
     function takeBack(
         address user,
         uint256 tokenId,
         uint256 amount
     ) external;
 
+    /**
+    * @notice Return the NFT to the NFT owner’s address
+    **/
     function ownerOf(uint256 id) external view returns (address);
 
+    /**
+    * @notice Return the total supply amount of the current token
+    **/
     function totalSupply(uint256 id) external view returns (uint256);
 }
+
 
 ```
 ## Rationale
